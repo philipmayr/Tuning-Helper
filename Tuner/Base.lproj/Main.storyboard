@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tuner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OdQ-U5-DYj">
+                                <rect key="frame" x="16" y="59" width="361" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <segmentedControl toolTip="Instrument" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="58V-Hb-8Fb">
+                                        <rect key="frame" x="0.0" y="31" width="361" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <segments>
+                                            <segment title="Violin"/>
+                                            <segment title="Viola"/>
+                                            <segment title="Cello"/>
+                                            <segment title="Guitar"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="instrumentSegmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="q7O-xD-AW0"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl toolTip="Pitch" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-Eg-dtv">
+                                        <rect key="frame" x="57" y="78" width="246" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <segments>
+                                            <segment title="440 Hz"/>
+                                            <segment title="415 Hz"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="pitchSegmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Csj-eU-kpd"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Reset Base Pitch" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5x-0q-E29">
+                                        <rect key="frame" x="57" y="78" width="246" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Reset Base Pitch" cornerStyle="dynamic"/>
+                                        <connections>
+                                            <action selector="resetBasePitchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gAu-Qs-evI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RTa-ce-APF">
+                                <rect key="frame" x="16" y="187" width="361" height="536"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A4 = 440 Hz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edv-Xk-spf">
+                                        <rect key="frame" x="55" y="8" width="250" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.0039215686274509803" green="0.20000000000000001" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM5-Sc-Kqj">
+                                        <rect key="frame" x="8" y="38" width="345" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0039215686274509803" green="0.20000000000000001" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">Pythagorean Temperament
+(Pure Perfect Fifths)</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.0039215686274509803" green="0.20000000000000001" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9g-DA-K3t">
+                                        <rect key="frame" x="55" y="117" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="I" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonStringIPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZG-Ij-POf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34Q-Lk-szI">
+                                        <rect key="frame" x="185" y="116" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="II" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonStringIIPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VlA-n2-ZTa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzC-VP-VSl">
+                                        <rect key="frame" x="55" y="245" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="III" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonStringIIIPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzg-yn-frK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiO-KX-KoM">
+                                        <rect key="frame" x="185" y="245" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="IV" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonStringIVPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEk-qK-3uz"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPY-oi-Ex5">
+                                        <rect key="frame" x="55" y="373" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="V" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonStringIIIPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bB-IE-cLF"/>
+                                            <action selector="buttonStringVPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imv-kP-raN"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L9-RR-9Vf">
+                                        <rect key="frame" x="185" y="373" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="VI" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonStringIIIPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kft-73-v1H"/>
+                                            <action selector="buttonStringVIPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tba-YD-h6U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZa-Ci-yFR">
+                                <rect key="frame" x="0.0" y="697" width="393" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <slider toolTip="Base Pitch Frequency" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minValue="392" maxValue="465" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-Mg-Z8S">
+                                        <rect key="frame" x="26" y="20" width="340" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.50434602649006621" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.0039215686274509803" green="0.20000000000000001" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="frequencySliderTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q22-vq-mYB"/>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lon-cr-t92"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Base Pitch Frequency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-PP-hZV">
+                                        <rect key="frame" x="96" y="0.0" width="200" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0039215686274509803" green="0.20000000000000001" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" minimumValue="392" maximumValue="465" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="bLq-Zk-cCd">
+                                        <rect key="frame" x="149" y="89" width="94" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.0" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="frequencyStepperTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XzC-0b-wOA"/>
+                                            <action selector="frequencyStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="c2X-ZF-g0e"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="440 Hz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ial-Do-nRD">
+                                        <rect key="frame" x="80" y="50" width="232" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0039215686274509803" green="0.20000000000000001" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="A4Label" destination="edv-Xk-spf" id="dc4-tR-NQa"/>
+                        <outlet property="buttonStringI" destination="t9g-DA-K3t" id="ZNT-uG-7a8"/>
+                        <outlet property="buttonStringII" destination="34Q-Lk-szI" id="8jL-fr-6o9"/>
+                        <outlet property="buttonStringIII" destination="bzC-VP-VSl" id="GYx-S4-8Wr"/>
+                        <outlet property="buttonStringIV" destination="hiO-KX-KoM" id="CFq-bf-W0W"/>
+                        <outlet property="buttonStringV" destination="oPY-oi-Ex5" id="cPF-Nj-Swn"/>
+                        <outlet property="buttonStringVI" destination="3L9-RR-9Vf" id="YnS-TD-9ND"/>
+                        <outlet property="frequencyLabel" destination="Ial-Do-nRD" id="e7x-8T-hfG"/>
+                        <outlet property="frequencySlider" destination="9mN-Mg-Z8S" id="U9P-Wn-l37"/>
+                        <outlet property="frequencyStepper" destination="bLq-Zk-cCd" id="xUH-tM-EdF"/>
+                        <outlet property="pitchSegmentedControl" destination="fnq-Eg-dtv" id="Y5X-aC-9c7"/>
+                        <outlet property="resetBasePitchButton" destination="Z5x-0q-E29" id="95e-ve-3l9"/>
+                        <outlet property="temperamentLabel" destination="HM5-Sc-Kqj" id="tO9-tS-8oY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258.77862595419845" y="58.450704225352112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
