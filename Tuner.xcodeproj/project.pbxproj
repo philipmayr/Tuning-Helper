@@ -7,32 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A63694562B2ED5450018AF01 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A63694552B2ED5450018AF01 /* Localizable.xcstrings */; };
 		A644A2952B19FF9700D9A23D /* ToneGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644A2942B19FF9700D9A23D /* ToneGenerator.swift */; };
-		A64C41802B19124700595E4C /* C3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A64C417F2B19124700595E4C /* C3.mp3 */; };
-		A64C41872B19162C00595E4C /* G2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A64C41832B19162C00595E4C /* G2.mp3 */; };
-		A64C41882B19162C00595E4C /* D3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A64C41842B19162C00595E4C /* D3.mp3 */; };
-		A64C41892B19162C00595E4C /* C2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A64C41852B19162C00595E4C /* C2.mp3 */; };
-		A64C418A2B19162C00595E4C /* A3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A64C41862B19162C00595E4C /* A3.mp3 */; };
 		A6CB6C7E2B18BE4700247EDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB6C7D2B18BE4700247EDD /* AppDelegate.swift */; };
 		A6CB6C802B18BE4700247EDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB6C7F2B18BE4700247EDD /* SceneDelegate.swift */; };
 		A6CB6C822B18BE4700247EDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB6C812B18BE4700247EDD /* ViewController.swift */; };
 		A6CB6C852B18BE4700247EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CB6C832B18BE4700247EDD /* Main.storyboard */; };
 		A6CB6C872B18BE4800247EDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CB6C862B18BE4800247EDD /* Assets.xcassets */; };
 		A6CB6C8A2B18BE4800247EDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CB6C882B18BE4800247EDD /* LaunchScreen.storyboard */; };
-		A6CB6C922B18F17600247EDD /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB6C912B18F17600247EDD /* SoundPlayer.swift */; };
-		A6CB6C982B18F40900247EDD /* A4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6CB6C972B18F40900247EDD /* A4.mp3 */; };
-		A6CB6C9A2B18F45C00247EDD /* D4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6CB6C992B18F45B00247EDD /* D4.mp3 */; };
-		A6CB6C9C2B18F46B00247EDD /* G3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6CB6C9B2B18F46B00247EDD /* G3.mp3 */; };
-		A6CB6C9E2B18F47700247EDD /* E5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6CB6C9D2B18F47700247EDD /* E5.mp3 */; };
+		A6EADDE62B2C29F0003D8200 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EADDE52B2C29F0003D8200 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A63694552B2ED5450018AF01 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		A644A2942B19FF9700D9A23D /* ToneGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToneGenerator.swift; sourceTree = "<group>"; };
-		A64C417F2B19124700595E4C /* C3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = C3.mp3; sourceTree = "<group>"; };
-		A64C41832B19162C00595E4C /* G2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G2.mp3; sourceTree = "<group>"; };
-		A64C41842B19162C00595E4C /* D3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = D3.mp3; sourceTree = "<group>"; };
-		A64C41852B19162C00595E4C /* C2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = C2.mp3; sourceTree = "<group>"; };
-		A64C41862B19162C00595E4C /* A3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A3.mp3; sourceTree = "<group>"; };
 		A6CB6C7A2B18BE4700247EDD /* Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CB6C7D2B18BE4700247EDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6CB6C7F2B18BE4700247EDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,11 +29,7 @@
 		A6CB6C862B18BE4800247EDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6CB6C892B18BE4800247EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6CB6C8B2B18BE4800247EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6CB6C912B18F17600247EDD /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
-		A6CB6C972B18F40900247EDD /* A4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A4.mp3; sourceTree = "<group>"; };
-		A6CB6C992B18F45B00247EDD /* D4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = D4.mp3; sourceTree = "<group>"; };
-		A6CB6C9B2B18F46B00247EDD /* G3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G3.mp3; sourceTree = "<group>"; };
-		A6CB6C9D2B18F47700247EDD /* E5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E5.mp3; sourceTree = "<group>"; };
+		A6EADDE52B2C29F0003D8200 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,24 +62,16 @@
 		A6CB6C7C2B18BE4700247EDD /* Tuner */ = {
 			isa = PBXGroup;
 			children = (
+				A63694552B2ED5450018AF01 /* Localizable.xcstrings */,
 				A644A2942B19FF9700D9A23D /* ToneGenerator.swift */,
 				A6CB6C7D2B18BE4700247EDD /* AppDelegate.swift */,
 				A6CB6C7F2B18BE4700247EDD /* SceneDelegate.swift */,
 				A6CB6C812B18BE4700247EDD /* ViewController.swift */,
-				A6CB6C912B18F17600247EDD /* SoundPlayer.swift */,
 				A6CB6C832B18BE4700247EDD /* Main.storyboard */,
+				A6EADDE52B2C29F0003D8200 /* SettingsViewController.swift */,
 				A6CB6C862B18BE4800247EDD /* Assets.xcassets */,
 				A6CB6C882B18BE4800247EDD /* LaunchScreen.storyboard */,
 				A6CB6C8B2B18BE4800247EDD /* Info.plist */,
-				A6CB6C972B18F40900247EDD /* A4.mp3 */,
-				A6CB6C992B18F45B00247EDD /* D4.mp3 */,
-				A6CB6C9B2B18F46B00247EDD /* G3.mp3 */,
-				A6CB6C9D2B18F47700247EDD /* E5.mp3 */,
-				A64C417F2B19124700595E4C /* C3.mp3 */,
-				A64C41862B19162C00595E4C /* A3.mp3 */,
-				A64C41852B19162C00595E4C /* C2.mp3 */,
-				A64C41842B19162C00595E4C /* D3.mp3 */,
-				A64C41832B19162C00595E4C /* G2.mp3 */,
 			);
 			path = Tuner;
 			sourceTree = "<group>";
@@ -116,6 +92,8 @@
 			dependencies = (
 			);
 			name = Tuner;
+			packageProductDependencies = (
+			);
 			productName = Tuner;
 			productReference = A6CB6C7A2B18BE4700247EDD /* Tuner.app */;
 			productType = "com.apple.product-type.application";
@@ -137,13 +115,18 @@
 			};
 			buildConfigurationList = A6CB6C752B18BE4700247EDD /* Build configuration list for PBXProject "Tuner" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "es-419";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
+				ca,
+				es,
 			);
 			mainGroup = A6CB6C712B18BE4700247EDD;
+			packageReferences = (
+			);
 			productRefGroup = A6CB6C7B2B18BE4700247EDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,18 +141,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A64C41802B19124700595E4C /* C3.mp3 in Resources */,
-				A6CB6C9C2B18F46B00247EDD /* G3.mp3 in Resources */,
-				A6CB6C9E2B18F47700247EDD /* E5.mp3 in Resources */,
 				A6CB6C8A2B18BE4800247EDD /* LaunchScreen.storyboard in Resources */,
 				A6CB6C872B18BE4800247EDD /* Assets.xcassets in Resources */,
+				A63694562B2ED5450018AF01 /* Localizable.xcstrings in Resources */,
 				A6CB6C852B18BE4700247EDD /* Main.storyboard in Resources */,
-				A6CB6C9A2B18F45C00247EDD /* D4.mp3 in Resources */,
-				A64C41872B19162C00595E4C /* G2.mp3 in Resources */,
-				A6CB6C982B18F40900247EDD /* A4.mp3 in Resources */,
-				A64C41882B19162C00595E4C /* D3.mp3 in Resources */,
-				A64C418A2B19162C00595E4C /* A3.mp3 in Resources */,
-				A64C41892B19162C00595E4C /* C2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +158,7 @@
 				A6CB6C822B18BE4700247EDD /* ViewController.swift in Sources */,
 				A6CB6C7E2B18BE4700247EDD /* AppDelegate.swift in Sources */,
 				A644A2952B19FF9700D9A23D /* ToneGenerator.swift in Sources */,
-				A6CB6C922B18F17600247EDD /* SoundPlayer.swift in Sources */,
+				A6EADDE62B2C29F0003D8200 /* SettingsViewController.swift in Sources */,
 				A6CB6C802B18BE4700247EDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

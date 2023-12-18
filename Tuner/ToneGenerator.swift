@@ -8,13 +8,15 @@
 import AudioUnit
 import AVFoundation
 
-class ToneGenerator {
+class ToneGenerator: NSObject {
     private static let BytesPerFloat: UInt32 = 4
     private static let BitsPerByte: UInt32 = 8
     private static let SampleRate: Double = 44100
-    private static let Amplitude: Double = 0.25
+    private static var Amplitude: Double = 0.25
+    private static var FadeIn: Bool = true
+    private static var FadeOut: Bool = false
     private static let MonotoneChannel = 0
-
+    
     private var audioComponentInstance: AudioComponentInstance?
     private var theta: Double = 0
 
@@ -29,6 +31,9 @@ class ToneGenerator {
     /**
      * Start playing the tone at the frequency if not already playing
      */
+    
+    public var isPlaying: Bool = false
+    
     func play() {
         if audioComponentInstance == nil {
             audioComponentInstance = createAudioUnit()
@@ -38,24 +43,54 @@ class ToneGenerator {
             }
 
             // This starts the sound
+            
+            if isPlaying {
+                usleep(1000000)
+            }
+            ToneGenerator.FadeOut = false
+            ToneGenerator.FadeIn = true
+            ToneGenerator.Amplitude = 0.001
             AudioUnitInitialize(audioComponentInstance)
             AudioOutputUnitStart(audioComponentInstance)
+            isPlaying.toggle()
         }
     }
-
+    
     /**
      * Stop playing the tone if currently playing
      */
     func stop() {
+        //NSObject.cancelPreviousPerformRequests(withTarget: self)
+
         guard let audioComponentInstance else {
             return
         }
+        
+        ToneGenerator.FadeIn.toggle()
+        ToneGenerator.FadeOut.toggle()
+        
+//        while ToneGenerator.Amplitude > 0.0 {
+//            ToneGenerator.Amplitude -= 0.00000001
+//        }
+        
+        usleep(1000000)
         AudioOutputUnitStop(audioComponentInstance)
         AudioUnitUninitialize(audioComponentInstance)
         AudioComponentInstanceDispose(audioComponentInstance)
         self.audioComponentInstance = nil
+                
+        ToneGenerator.FadeOut.toggle()
+        //perform(#selector(hush), with: nil, afterDelay: 0.5)
+        isPlaying.toggle()
     }
-
+    
+    @objc func hush() {
+        AudioOutputUnitStop(audioComponentInstance!)
+        AudioUnitUninitialize(audioComponentInstance!)
+        AudioComponentInstanceDispose(audioComponentInstance!)
+        self.audioComponentInstance = nil
+    }
+    
     // MARK: Private helpers
 
     // This is equivalent to RenderTone in the original example
@@ -78,16 +113,24 @@ class ToneGenerator {
             fatalError("Could not access the monotone channel in the passed in buffer")
         }
         let buffer = monotoneChannel.assumingMemoryBound(to: Float.self)
-
-        // Generate the samples
+            
+        if FadeIn && Amplitude < 0.25 {
+//            Amplitude += 0.001
+            Amplitude += (log(Amplitude) + 7) / 1000
+        }
+        if FadeOut && Amplitude > 0 {
+//            Amplitude -= 0.001
+            Amplitude -= (log(Amplitude) + 7) / 1000
+        }
+         
         for frame in 0 ..< inNumberFrames {
-            buffer[Int(frame)] = Float(sin(theta) * ToneGenerator.Amplitude)
+            buffer[Int(frame)] = Float(sin(theta) * (Amplitude))
             theta += thetaIncrement
             if theta > 2.0 * Double.pi {
                 theta -= 2.0 * Double.pi
             }
         }
-
+            
         // Store the updated theta
         toneGenerator.theta = theta
 
