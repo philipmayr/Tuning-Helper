@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "49C39CFE-D822-45B8-AED3-C37D9A0BB6D1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EE308CE-FE56-4131-BDF5-C1001BD86C7D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tuner/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7EE308CE-FE56-4131-BDF5-C1001BD86C7D - 9ea931a79036cf99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tuner.ViewController.instrumentSegmentedControl.getter : Swift.Optional&lt;__C.UISegmentedControl&gt;"
+                  moduleName = "Tuner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Phil/Desktop/Tuner/Tuner/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "7EE308CE-FE56-4131-BDF5-C1001BD86C7D - 1b50d205d1bf27ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tuner.ViewController.instrumentSegmentedControl.setter : Swift.Optional&lt;__C.UISegmentedControl&gt;"
+                  moduleName = "Tuner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Phil/Desktop/Tuner/Tuner/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "7EE308CE-FE56-4131-BDF5-C1001BD86C7D - ca6f843eb87c4017"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tuner.ViewController.instrumentSegmentedControl.modify : Swift.Optional&lt;__C.UISegmentedControl&gt;"
+                  moduleName = "Tuner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Phil/Desktop/Tuner/Tuner/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "7EE308CE-FE56-4131-BDF5-C1001BD86C7D - 87de716d4d3ed571"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tuner.ViewController.instrumentSegmentedControl.modify : Swift.Optional&lt;__C.UISegmentedControl&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Tuner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Phil/Desktop/Tuner/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "7EE308CE-FE56-4131-BDF5-C1001BD86C7D - 1b1799ff4fb54d57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tuner.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Tuner.ViewController"
+                  moduleName = "Tuner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Phil/Desktop/Tuner/Tuner/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "7EE308CE-FE56-4131-BDF5-C1001BD86C7D - 82dd3a60de2ac38c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tuner.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Tuner.ViewController&gt;"
+                  moduleName = "Tuner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Phil/Desktop/Tuner/Tuner/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "600">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A00C30C-BDD4-491D-AA2D-92AB980C63C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tuner/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "619"
+            endingLineNumber = "619"
+            landmarkName = "playTone(Index:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9A00C30C-BDD4-491D-AA2D-92AB980C63C2 - c6e63aebab363146"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tuner.ViewController.playTone(Index: Swift.Int) -&gt; ()"
+                  moduleName = "Tuner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Phil/Desktop/Tuner/Tuner/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "414"
+                  endingLineNumber = "414"
+                  offsetFromSymbolStart = "488">
+               </Location>
+               <Location
+                  uuid = "9A00C30C-BDD4-491D-AA2D-92AB980C63C2 - c6e63aebab363146"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tuner.ViewController.playTone(Index: Swift.Int) -&gt; ()"
+                  moduleName = "Tuner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Phil/Desktop/Tuner/Tuner/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "414"
+                  endingLineNumber = "414"
+                  offsetFromSymbolStart = "640">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
