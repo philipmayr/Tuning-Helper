@@ -115,7 +115,7 @@
 			};
 			buildConfigurationList = A6CB6C752B18BE4700247EDD /* Build configuration list for PBXProject "Tuner" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = ca;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

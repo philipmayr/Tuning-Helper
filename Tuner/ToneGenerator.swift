@@ -41,15 +41,19 @@ class ToneGenerator: NSObject {
                 print("Audio component could not be created")
                 return
             }
-
+            
             // This starts the sound
             
             if isPlaying {
-                usleep(1000000)
+                let factor = UInt32(ToneGenerator.Amplitude / 0.25)
+                usleep(670000 * factor + 330000)
+            } else
+            {
+                ToneGenerator.Amplitude = 0.001
             }
+                
             ToneGenerator.FadeOut = false
             ToneGenerator.FadeIn = true
-            ToneGenerator.Amplitude = 0.001
             AudioUnitInitialize(audioComponentInstance)
             AudioOutputUnitStart(audioComponentInstance)
             isPlaying.toggle()
@@ -73,23 +77,24 @@ class ToneGenerator: NSObject {
 //            ToneGenerator.Amplitude -= 0.00000001
 //        }
         
-        usleep(1000000)
+        let factor = UInt32(ToneGenerator.Amplitude / 0.25)
+        usleep(670000 * factor + 330000)
         AudioOutputUnitStop(audioComponentInstance)
         AudioUnitUninitialize(audioComponentInstance)
         AudioComponentInstanceDispose(audioComponentInstance)
         self.audioComponentInstance = nil
-                
+        ToneGenerator.Amplitude = 0.001
         ToneGenerator.FadeOut.toggle()
         //perform(#selector(hush), with: nil, afterDelay: 0.5)
         isPlaying.toggle()
     }
     
-    @objc func hush() {
-        AudioOutputUnitStop(audioComponentInstance!)
-        AudioUnitUninitialize(audioComponentInstance!)
-        AudioComponentInstanceDispose(audioComponentInstance!)
-        self.audioComponentInstance = nil
-    }
+//    @objc func hush() {
+//        AudioOutputUnitStop(audioComponentInstance!)
+//        AudioUnitUninitialize(audioComponentInstance!)
+//        AudioComponentInstanceDispose(audioComponentInstance!)
+//        self.audioComponentInstance = nil
+//    }
     
     // MARK: Private helpers
 
@@ -118,9 +123,12 @@ class ToneGenerator: NSObject {
 //            Amplitude += 0.001
             Amplitude += (log(Amplitude) + 7) / 1000
         }
-        if FadeOut && Amplitude > 0 {
+        if FadeOut && Amplitude > 0.001 {
 //            Amplitude -= 0.001
             Amplitude -= (log(Amplitude) + 7) / 1000
+            if Amplitude < 0.001 {
+                Amplitude = 0.001
+            }
         }
          
         for frame in 0 ..< inNumberFrames {

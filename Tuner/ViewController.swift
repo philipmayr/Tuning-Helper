@@ -250,7 +250,7 @@ class ViewController: UIViewController {
         {
             frequencyLabel.text = frequencyString + " Hz"
         }
-        A4Label.text = "A4 = " + frequencyString + " Hz"
+        A4Label.text = "A4 æ " + frequencyString + " Hz"
         pitchSegmentedControl.isHidden = true
         resetBasePitchButton.isHidden = false
     }
@@ -301,7 +301,7 @@ class ViewController: UIViewController {
                                   duration: 0.33,
                                   options: [.transitionCrossDissolve],
                                   animations: {
-                self.A4Label.text = "A4 = 415"
+                self.A4Label.text = "A4 æ 415 Hz"
             }, completion: nil)
             frequencySlider.value = 415
             frequencyStepper.value = 415
@@ -345,7 +345,7 @@ class ViewController: UIViewController {
                                       duration: 0.33,
                                       options: [.transitionCrossDissolve],
                                       animations: {
-                    self.A4Label.text = "A4 = 432"
+                    self.A4Label.text = "A4 æ 432 Hz"
                 }, completion: nil)
                 frequencySlider.value = 432
                 frequencyStepper.value = 432
@@ -360,7 +360,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pitchSegmentedControlValueChanged(_ sender: UISegmentedControl) {
-        A4Label.text = "A4 = " + sender.titleForSegment(at: sender.selectedSegmentIndex)!
+        A4Label.text = "A4 æ " + sender.titleForSegment(at: sender.selectedSegmentIndex)!
         frequencySlider.value = Float(sender.titleForSegment(at: sender.selectedSegmentIndex)!.dropLast(3))!
         frequencyStepper.value = Double(sender.titleForSegment(at: sender.selectedSegmentIndex)!.dropLast(3))!
         frequencyString = String(frequencyStepper.value)
@@ -554,7 +554,7 @@ class ViewController: UIViewController {
     
     @IBAction func frequencySliderTouchUpInside(_ sender: UISlider) {
         frequencyStepper.value = Double(sender.value)
-        A4Label.text = "A4 = " + frequencyString + " Hz"
+        A4Label.text = "A4 æ " + frequencyString + " Hz"
         if ((Array(frequencyString)[frequencyString.count - 1] == "0") &&
             (Array(frequencyString)[frequencyString.count - 2] == "."))
         {
@@ -570,7 +570,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetBasePitchButton(_ sender: UIButton) {
-        A4Label.text = "A4 = 440 Hz"
+        A4Label.text = "A4 æ 440 Hz"
         frequencySlider.value = 440.0
         sender.isHidden = true
         pitchSegmentedControl.isHidden = false
